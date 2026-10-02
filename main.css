@@ -1,0 +1,750 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 65px;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #0b0f1a;
+  color: #f0f1f2;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px;
+  background-color: rgba(11, 15, 26, 0.8);
+  backdrop-filter: blur(10px);
+  z-index: 1;
+}
+
+header h2 {
+  margin-top: 5px;
+}
+
+header nav {
+  display: none;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+header nav ul li {
+  width: 100%;
+  text-align: center;
+  margin-top: 15px;
+  list-style: none;
+  border-bottom: 2px solid whitesmoke;
+}
+
+header nav ul li a {
+  display: block;
+  text-decoration: none;
+  color: #f0f1f2;
+  transition: all 0.3s;
+}
+
+header nav ul li a:hover,
+header nav ul li a:active {
+  font-size: 1.2em;
+}
+
+header button {
+  float: right;
+  border: none;
+  background-color: whitesmoke;
+  height: 4px;
+  width: 35px;
+  border-radius: 5px;
+  transform: translateY(-15px);
+  position: relative;
+}
+
+header button::after,
+header button::before {
+  content: "";
+  background-color: whitesmoke;
+  height: 4px;
+  width: 35px;
+  border-radius: 5px;
+  position: absolute;
+}
+
+header button::after {
+  transform: translate(-18px, 8px);
+}
+
+header button::before {
+  transform: translate(-18px, -12px);
+}
+
+/*
+--------------------------------------------
+
+        STYLING THE HERO SECTION
+
+--------------------------------------------
+*/
+
+main .hero-section {
+  height: 100%;
+  padding: 100px 2rem 1rem 2rem;
+}
+
+.hero-section h1 {
+  font-size: 2.6rem;
+  margin-bottom: 2rem;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+}
+
+.hero-intro button {
+  background-color: #0947e2;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  padding: 5px 20px;
+  margin: 2rem 0;
+  box-shadow: 0 0 10px rgba(9, 71, 226, 0.8);
+  transition: all 0.3s;
+}
+
+.hero-intro button a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+.hero-intro button:hover {
+  box-shadow: 0 0 20px rgba(9, 71, 226, 0.8);
+  transform: scale(1.05);
+}
+
+.hero-section-image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 2.5rem;
+}
+
+.profile-image {
+  box-shadow: 0 0 5px rgba(100, 83, 248, 0.5);
+  border-radius: 1rem;
+  transform: translateX(-4%);
+  width: 450px;
+}
+
+:is(.hero-section:hover) .profile-image {
+  box-shadow: 0 0 10px rgba(100, 83, 248, 0.5);
+}
+
+/*
+----------------------------------------------------
+
+STYLING THE ABOUT SECTION
+
+----------------------------------------------------
+*/
+
+.about-section {
+  width: 100%;
+  background-image: radial-gradient(#10182a 50px, #0b0f1a);
+  background-size: cover;
+  padding: 1rem 2rem 1rem 2rem;
+}
+
+.about-section h2 {
+  width: 100%;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.about-section-details {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.about-section-infor p {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.about-section-image figure {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.about-section-image figure img {
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.6);
+  width: 450px;
+  border-radius: 1rem;
+}
+
+/*
+-----------------------------------------------------------------
+
+STYLING TECHNICAL SKILLS SECTION
+
+-----------------------------------------------------------------
+*/
+
+.skills-section {
+  padding: 2rem 2rem 1rem 2rem;
+}
+
+.skills-section h2 {
+  width: 100%;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.skills-section-intro {
+  width: 100%;
+  font-size: 1.3rem;
+  text-align: center;
+  margin: 1rem;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.skills-group {
+  background-color: #0b0f1a;
+  margin: 10px;
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: 90%;
+  border: 2px solid hsl(222, 30%, 18%);
+}
+
+.skills-container div h4 {
+  padding: 15px;
+  margin: 10px 0;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: hsl(223, 32%, 22%);
+}
+
+.skills-container div i {
+  font-size: 2rem;
+  display: block;
+}
+
+.skills-group h3 {
+  font-size: 1.2rem;
+  margin: 30px 0;
+}
+
+.skills-container div p {
+  font-weight: lighter;
+  margin: 20px 0;
+}
+
+.skills-container div span {
+  display: inline-block;
+  padding: 5px;
+  margin-bottom: 10px;
+  margin-right: 5px;
+  border-radius: 5px;
+  background-color: #1a2848;
+}
+
+/*
+------------------------------------------------------------
+
+STYLING PROJECTS SECTION
+
+------------------------------------------------------------
+*/
+
+.projects-section {
+  padding: 20px 5px;
+  background-image: radial-gradient(#10182a 50px, #0b0f1a);
+}
+
+.projects-section h2 {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  margin: 20px 0;
+}
+
+.project-section-description {
+  width: 100%;
+  font-size: 1.5rem;
+  letter-spacing: 1.5px;
+  text-align: center;
+  margin: 50px auto;
+}
+
+.projects-section-examples {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  row-gap: 30px;
+}
+
+.project {
+  border: 2px solid hsl(222, 30%, 18%);
+  width: 90%;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.project figure img {
+  width: 100%;
+}
+
+.project div {
+  padding: 10px;
+}
+
+.project h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.project p {
+  margin-bottom: 10px;
+}
+
+.project button {
+  border: none;
+  color: aliceblue;
+  background-color: #0947e2;
+  padding: 5px 20px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: bolder;
+}
+
+/*
+-----------------------------------------------------------
+
+STYLING CONTACTS PAGE
+
+-----------------------------------------------------------
+*/
+
+.contacts-section {
+  padding: 30px;
+}
+
+.contacts-section h2 {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  margin: 20px 0;
+}
+
+.inviting-msg {
+  font-size: 1.1rem;
+  letter-spacing: 1.5px;
+  margin: 10px auto 30px;
+  text-align: center;
+}
+
+.contacts-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  width: 100%;
+}
+
+.contacts-section-infor {
+  width: 500px;
+  height: 500px;
+}
+
+.contacts-section-infor h3 {
+  width: 100%;
+  font-size: 2rem;
+  margin: 20px 0;
+}
+
+.contacts-section-infor p {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  margin: 25px 0;
+}
+
+.direct-contacts li {
+  list-style: none;
+  margin: 20px 0;
+}
+
+.direct-contacts li a {
+  color: aliceblue;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.direct-contacts li a i {
+  font-size: 1.4em;
+  color: hsl(215, 20%, 55%);
+}
+
+.contact-links ul li {
+  display: inline;
+  margin-right: 10px;
+  list-style: none;
+}
+
+.contact-links ul li a {
+  color: hsl(215, 20%, 55%);
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.contacts-section-user-infor {
+  width: 500px;
+  height: 500px;
+}
+
+.contacts-section-user-infor form {
+  padding: 20px;
+  width: 90%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  gap: 30px;
+  border: 2px solid hsl(222, 30%, 18%);
+  border-radius: 20px;
+  background-color: #0f1420;
+  box-shadow: inset 0 0 10px 2px rgba(60, 105, 221, 0.1);
+}
+
+.contacts-section-user-infor form input {
+  width: 100%;
+  border: 1px solid hsl(222, 30%, 18%);
+  border-radius: 10px;
+  background-color: #0b0f1a;
+  padding: 15px;
+  font-size: 1.1rem;
+  color: aliceblue;
+  outline-color: darkblue;
+}
+
+.contacts-section-user-infor form textarea {
+  background-color: #0b0f1a;
+  width: 100%;
+  height: 100%;
+  border: 1px solid hsl(222, 30%, 18%);
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 1.1rem;
+  outline-color: darkblue;
+}
+
+.contacts-section-user-infor form button {
+  width: 60%;
+  padding: 5px 20px;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  color: aliceblue;
+  border: none;
+  border-radius: 10px;
+  background-color: #2453d5;
+  box-shadow: 0 0 20px rgba(77, 123, 239, 0.5);
+}
+
+/*
+--------------------------------------------------------------------------
+
+STYLING FOOTER SECTION
+
+--------------------------------------------------------------------------
+*/
+
+footer {
+  background-color: #070a11;
+}
+
+footer div {
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.owner h2 {
+  font-size: 2rem;
+  margin: 20px 0;
+}
+
+.owner h3 {
+  font-size: 1.5rem;
+  font-weight: lighter;
+}
+
+.contacts-footer h3,
+footer .quik-links h3 {
+  font-size: 1.5rem;
+  margin: 20px auto;
+}
+
+.contacts-footer ul li,
+footer .quik-links ul li {
+  list-style: none;
+  margin: 20px 0;
+}
+
+.contacts-footer ul li a,
+footer .quik-links ul li a {
+  text-decoration: none;
+  color: aliceblue;
+}
+
+footer p {
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+}
+
+
+/*
+
+RESPONSIVE DESIGNS CODE
+
+*/
+
+
+@media screen and (max-width: 576px) {
+  .hero-intro{
+    transform: translateX(300px);
+  }
+
+  .hero-section-image {
+    transform: translateX(-300px);
+  }
+}
+
+
+@media screen and (min-width: 1024px) {
+  header button {
+    display: none;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  header nav {
+    display: block;
+  }
+
+  header nav ul li {
+    position: relative;
+    border-bottom: none;
+  }
+
+  .header-link::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 3px;
+    background-color: whitesmoke;
+    display: none;
+  }
+
+  header nav ul {
+    flex-direction: row;
+    gap: 5rem;
+  }
+
+  :is(nav li:hover) .header-link::after {
+    display: block;
+    animation: underline 0.3s ease-out forwards;
+  }
+
+  @keyframes underline {
+    from {
+      width: 10%;
+    }
+
+    to {
+      width: 100%;
+    }
+  }
+
+  /*
+  --------------------------------------------------
+
+  HERO SECTION
+
+  --------------------------------------------------
+  */
+
+  .hero-section {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+  }
+
+  .hero-intro {
+    transform: translateX(-400px);
+  }
+
+  .hero-section h1 {
+    font-size: 4em;
+  }
+
+  .hero-section p {
+    width: 80%;
+    font-size: 1.5em;
+  }
+
+  .hero-section button {
+    font-size: 1.5em;
+  }
+
+  .hero-section-image {
+    transform: translateX(500px);
+  }
+
+  /*
+  --------------------------------------------------
+
+  ABOUT SECTION
+
+  --------------------------------------------------
+  */
+
+  .about-section-details {
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 6rem;
+  }
+
+  .about-section-infor {
+    margin-top: 2rem;
+    padding: 3rem 0;
+    transform: translateX(500px);
+  }
+
+  .about-section-infor p {
+    font-size: 1.5rem;
+    margin-bottom: 4rem;
+    width: 80%;
+  }
+
+  .about-section-image {
+    transform: translateX(-400px);
+  }
+
+  /*
+  --------------------------------------------------
+
+  SKILLS SECTION
+
+  --------------------------------------------------
+  */
+
+  .skills-section-intro {
+    font-size: 1.5em;
+  }
+
+  .skills-container {
+    flex-direction: initial;
+    flex-wrap: wrap;
+  }
+
+  .skills-group {
+    width: 40%;
+  }
+
+  .skills-group h3 {
+    font-size: 1.5em;
+  }
+
+  .skills-group p {
+    font-size: 1.2em;
+  }
+
+  .project {
+    width: 40%;
+  }
+
+  .project h3 {
+    font-size: 1.5em;
+  }
+
+  .project p {
+    font-size: 1.25em;
+  }
+
+  /*
+  --------------------------------------------------
+
+  CONTACTS SECTION
+
+  --------------------------------------------------
+  */
+
+  .contacts-container {
+    flex-direction: initial;
+  }
+
+  /*
+  --------------------------------------------------
+
+  FOOTER SECTION
+
+  --------------------------------------------------
+  */
+
+  footer div {
+    justify-content: space-between;
+    flex-direction: initial;
+  }
+}
+
+
+/*
+
+ANIMATIONS
+
+*/
+
+.hidden {
+  opacity: 0;
+  transition: all 1.5s;
+}
+
+.show {
+  opacity: 1;
+  transform: translateX(0);
+}
